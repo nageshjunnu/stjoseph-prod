@@ -51,12 +51,28 @@ const ChangePassword = () => {
       });
   };
   const handleResetSubmit = async () => {
-  
     try {
+      // Get the email from local storage
+      const usersData = JSON.parse(localStorage.getItem('usersData'));
+      const email = usersData?.data?.email; // Optional chaining to avoid errors if usersData or data is undefined
+  
+      // Check if email is available
+      if (!email) {
+        alert('Email not found in local storage.');
+        return;
+      }
+  
+      // Send the POST request
       const response = await axios.post('https://kyroes.co/st-josephs/api/reset/', {
-        email: JSON.parse(localStorage.getItem('usersData')).data.email
+        email: email
+      }, {
+        headers: {
+          'Content-Type': 'application/json',
+        }
       });
-      alert(response.data.message?response.data.message:response.data.error);
+  
+      // Display the response message or error
+      alert(response.data.message || response.data.error || 'No message or error provided.');
     } catch (error) {
       console.error('Error resetting password:', error);
       alert('Failed to reset password.');

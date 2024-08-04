@@ -1,4 +1,5 @@
 import { withIronSession } from 'next-iron-session';
+import axios from 'axios';
 
 export default async function handler(req, res) {
     if (req.method === 'POST') {
@@ -6,14 +7,14 @@ export default async function handler(req, res) {
 
         try {
             const phpApiUrl = 'https://kyroes.co/st-josephs/api/login/'; // Replace with your PHP API URL
-            const response = await fetch(phpApiUrl, {
-                method: 'POST',
+
+            const response = await axios.post(phpApiUrl, req.body, {
                 headers: {
                     'Content-Type': 'application/json',
-                },
-                body: req.body,
+                }
             });
-            res.status(200).json({ success: true, data:response });
+
+            res.status(200).json({ success: true, data: response.data });
             // if (!response.ok) {
             //     throw new Error('Invalid email or password');
             // }
