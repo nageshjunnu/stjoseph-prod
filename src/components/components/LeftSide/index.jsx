@@ -111,6 +111,7 @@ const LeftSide = () => {
                             </li>
                             )}
                             {hasPermission && hasPermission !== "view" && (
+                                <>
                                 <li className="treeview">
                                     <Link href="/contacts">
                                         <i className="icon-Layout-4-blocks">
@@ -123,6 +124,19 @@ const LeftSide = () => {
                                         </span>
                                     </Link>
                                 </li>
+                                <li className="treeview">
+                                    <Link href="/email">
+                                        <i className="icon-Layout-4-blocks">
+                                            <span className="path1"></span>
+                                            <span className="path2"></span>
+                                        </i>
+                                        <span>Send Bulk Emails</span>
+                                        <span className="pull-right-container">
+                                            {/* <i className="fa fa-angle-right pull-right"></i> */}
+                                        </span>
+                                    </Link>
+                                </li>
+                                </>
                             )}
                              {hasPkey && (
                                 <>
