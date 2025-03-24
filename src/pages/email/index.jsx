@@ -42,7 +42,7 @@ const SendBulkMessageForm = () => {
     const config = {
       method: 'post',
       maxBodyLength: Infinity,
-      url: 'https://kyroes.co/st-josephs/api/sendBulkMessage/',
+      url: 'https://kyroes.in/st-josephs/api/sendBulkMessage/',
       headers: {
         'Content-Type': 'application/json',
       },

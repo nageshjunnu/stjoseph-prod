@@ -53,7 +53,7 @@ const NewStudentForm = () => {
     e.preventDefault();
     // axios.defaults.timeout = 10000; // 10 seconds
     try {
-      await axios.post('https://kyroes.co/st-josephs/api/register/', student);
+      await axios.post('https://kyroes.in/st-josephs/api/register/', student);
       alert('Student registered successfully');
       router.push('/success'); // Redirect to success page
     } catch (error) {

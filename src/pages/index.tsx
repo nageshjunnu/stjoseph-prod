@@ -26,7 +26,7 @@ const LoginForm = () => {
         const config = {
           method: 'post',
           maxBodyLength: Infinity,
-          url: 'https://kyroes.co/st-josephs/api/send-reset-password/',
+          url: 'https://kyroes.in/st-josephs/api/send-reset-password/',
           headers: {
             'Content-Type': 'application/json'
           },
@@ -76,7 +76,7 @@ const LoginForm = () => {
     }
 
     try {
-      const userCheckRes = await fetch(`https://kyroes.co/st-josephs/api/users/user/${email}`);
+      const userCheckRes = await fetch(`https://kyroes.in/st-josephs/api/users/user/${email}`);
       const userCheckData = await userCheckRes.json();
 
       if (userCheckData.status === 'success') {
@@ -142,7 +142,7 @@ const LoginForm = () => {
   const handleResetSubmit = async () => {
   
     try {
-      const response = await axios.post('https://kyroes.co/st-josephs/api/reset/', {
+      const response = await axios.post('https://kyroes.in/st-josephs/api/reset/', {
         email: email
       });
       setResetStatus(response.data.message);

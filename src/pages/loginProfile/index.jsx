@@ -36,7 +36,7 @@ const ChangePassword = () => {
       new_password: newPassword,
     };
 
-    axios.post('https://kyroes.co/st-josephs/api/student-password/', data, {
+    axios.post('https://kyroes.in/st-josephs/api/student-password/', data, {
       headers: {
         'Content-Type': 'application/json',
       },
@@ -63,7 +63,7 @@ const ChangePassword = () => {
       }
   
       // Send the POST request
-      const response = await axios.post('https://kyroes.co/st-josephs/api/reset/', {
+      const response = await axios.post('https://kyroes.in/st-josephs/api/reset/', {
         email: email
       }, {
         headers: {

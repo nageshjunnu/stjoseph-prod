@@ -20,7 +20,7 @@ const ResetPassword = () => {
       const config = {
         method: 'post',
         maxBodyLength: Infinity,
-        url: 'https://kyroes.co/st-josephs/api/send-reset-password/',
+        url: 'https://kyroes.in/st-josephs/api/send-reset-password/',
         headers: { 
           'Content-Type': 'application/json'
         },

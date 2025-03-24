@@ -42,7 +42,7 @@ const Dashboard = () => {
         // Function to fetch data from API
         const fetchData = async () => {
             try {
-                const response = await axios.get('https://kyroes.co/st-josephs/api/student-stats/');
+                const response = await axios.get('https://kyroes.in/st-josephs/api/student-stats/');
                 setStudentData(response.data); // Update state with API response
             } catch (error) {
                 console.error('Error fetching data:', error);

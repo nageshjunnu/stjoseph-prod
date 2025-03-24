@@ -31,7 +31,7 @@ const UserCreateForm = () => {
     e.preventDefault();
     try {
       // Make a POST request to create a new user
-      const response = await axios.post('https://kyroes.co/st-josephs/api/users/user/', user);
+      const response = await axios.post('https://kyroes.in/st-josephs/api/users/user/', user);
       if (response.data.status === 'success') {
         console.log('User created successfully:', response.data);
         alert('User created successfully');

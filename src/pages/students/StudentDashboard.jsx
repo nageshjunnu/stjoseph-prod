@@ -12,7 +12,7 @@ const StudentDashboard = () => {
   const { slug } = router.query;
 
   useEffect(() => {
-    axios.get(`https://kyroes.co/st-josephs/api/student/byid/${localStorage.getItem("studentId")}`)
+    axios.get(`https://kyroes.in/st-josephs/api/student/byid/${localStorage.getItem("studentId")}`)
       .then(response => {
         setStudentData(response.data.data);
       })
@@ -66,7 +66,7 @@ const StudentDashboard = () => {
                   }
                 </div>
                 <div className="widget-user-image">
-                  <img className="rounded-circle" src={studentData.photo ? `https://kyroes.co/st-josephs/controllers/uploads/${studentData.photo}` : "../images/avatar/375x200/2.jpg"} alt="User Avatar" />
+                  <img className="rounded-circle" src={studentData.photo ? `https://kyroes.in/st-josephs/controllers/uploads/${studentData.photo}` : "../images/avatar/375x200/2.jpg"} alt="User Avatar" />
                 </div>
                 <div className="box-footer">
                   {/* <div className="row">

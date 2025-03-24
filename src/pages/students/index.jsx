@@ -24,7 +24,7 @@ const StudentProfiles = () => {
   useEffect(() => {
     const fetchStudents = async () => {
       try {
-        const response = await axios.get('https://kyroes.co/st-josephs/api/students');
+        const response = await axios.get('https://kyroes.in/st-josephs/api/students');
         setStudents(response.data);
         // Extract unique years from the student data
         const years = Array.from(new Set(response.data.flatMap(student => [student.batchstart, student.batchend])));
@@ -36,7 +36,7 @@ const StudentProfiles = () => {
 
     const fetchDegreeOptions = async () => {
       try {
-        const response = await axios.get('https://kyroes.co/st-josephs/api/student-stats/');
+        const response = await axios.get('https://kyroes.in/st-josephs/api/student-stats/');
         const { category_counts } = response.data;
         const options = category_counts.map(item => item.degree);
         setDegreeOptions(options);
@@ -233,7 +233,7 @@ const StudentProfiles = () => {
                         <tbody>
                           {paginatedStudents.map(student => (
                             <tr key={student.student_id} onClick={() => handleRowClick(student.student_id)} style={{ cursor: "pointer" }}>
-                              <td><img src={student.photo ? `https://kyroes.co/st-josephs/controllers/uploads/${student.photo}` : "../images/avatar/375x200/2.jpg"} alt="Student" width="50" height="50" /></td>
+                              <td><img src={student.photo ? `https://kyroes.in/st-josephs/controllers/uploads/${student.photo}` : "../images/avatar/375x200/2.jpg"} alt="Student" width="50" height="50" /></td>
                               <td>
                                 <a href={`/students/${student.student_id}`}onClick={() => handleRowClick(student.student_id)}>
                                   {student.student_id}

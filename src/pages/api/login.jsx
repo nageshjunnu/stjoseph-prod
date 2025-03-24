@@ -6,7 +6,7 @@ export default async function handler(req, res) {
         const { email, password } = req.body;
 
         try {
-            const phpApiUrl = 'https://kyroes.co/st-josephs/api/login/'; // Replace with your PHP API URL
+            const phpApiUrl = 'https://kyroes.in/st-josephs/api/login/'; // Replace with your PHP API URL
 
             const response = await axios.post(phpApiUrl, req.body, {
                 headers: {

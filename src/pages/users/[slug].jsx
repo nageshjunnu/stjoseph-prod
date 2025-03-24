@@ -8,7 +8,7 @@ const UserProfile = () => {
   const { slug } = router.query;
 
   useEffect(() => {
-    axios.get(`https://kyroes.co/st-josephs/api/users/user/${slug}`)
+    axios.get(`https://kyroes.in/st-josephs/api/users/user/${slug}`)
       .then(response => {
         if (response.data.status === 'success') {
           setUser(response.data.data);

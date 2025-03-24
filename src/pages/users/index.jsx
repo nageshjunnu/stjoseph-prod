@@ -15,7 +15,7 @@ const UserList = () => {
 
   const fetchUsers = () => {
     const offset = (currentPage - 1) * itemsPerPage;
-    axios.get(`https://kyroes.co/st-josephs/api/users/user/?offset=${offset}&limit=${itemsPerPage}`)
+    axios.get(`https://kyroes.in/st-josephs/api/users/user/?offset=${offset}&limit=${itemsPerPage}`)
       .then(response => {
         if (response.data.status === 'success') {
           setUsers(response.data.data);

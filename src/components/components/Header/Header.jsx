@@ -45,8 +45,8 @@ const Header = () => {
 				</Link>
 				<Link href="index.html" className="logo">
 					<div className="logo-lg">
-						<span className="light-logo"><img src="https://kyroes.co/assets/img/logo/logo-3.png" alt="logo" /></span>
-						<span className="dark-logo"><img src="https://kyroes.co/assets/img/logo/logo-3.png" alt="logo" /></span>
+						<span className="light-logo"><img src="https://kyroes.in/assets/img/logo/logo-3.png" alt="logo" /></span>
+						<span className="dark-logo"><img src="https://kyroes.in/assets/img/logo/logo-3.png" alt="logo" /></span>
 					</div>
 				</Link>
 			</div>

@@ -9,7 +9,7 @@ const PasswordRecovery = () => {
     event.preventDefault();
 
     try {
-      const response = await axios.put('https://kyroes.co/st-josephs/api/reset/', {
+      const response = await axios.put('https://kyroes.in/st-josephs/api/reset/', {
         email: email
       });
       // Assuming API returns a success message or status

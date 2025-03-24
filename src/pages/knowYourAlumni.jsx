@@ -25,7 +25,7 @@ const KnowYourAlumni = () => {
 
     const fetchStudents = async () => {
       try {
-        const response = await axios.get('https://kyroes.co/st-josephs/api/students');
+        const response = await axios.get('https://kyroes.in/st-josephs/api/students');
         setStudents(response.data);
       } catch (error) {
         console.error('Error fetching student data:', error);
@@ -34,7 +34,7 @@ const KnowYourAlumni = () => {
 
     const fetchYearOptions = async () => {
       try {
-        const response = await axios.get('https://kyroes.co/st-josephs/api/student-stats/');
+        const response = await axios.get('https://kyroes.in/st-josephs/api/student-stats/');
         const { category_counts } = response.data;
         const options = category_counts.map(item => item.batchstart).sort();
         setYearOptions(options);

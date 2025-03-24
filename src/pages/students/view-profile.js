@@ -9,7 +9,7 @@ const ProfilePage = () => {
   useEffect(() => {
     const fetchStudentData = async () => {
       try {
-        const response = await axios.get(`https://kyroes.co/st-josephs/api/student/byid/${localStorage.getItem("studentId")}`);
+        const response = await axios.get(`https://kyroes.in/st-josephs/api/student/byid/${localStorage.getItem("studentId")}`);
         setStudentData(response.data.data);
       } catch (error) {
         console.error("There was an error fetching the student data!", error);

@@ -11,7 +11,7 @@ const ContactList = () => {
   useEffect(() => {
     const fetchContacts = async () => {
       try {
-        const response = await axios.get('https://kyroes.co/st-josephs/api/contact/');
+        const response = await axios.get('https://kyroes.in/st-josephs/api/contact/');
         setContacts(response.data);
       } catch (error) {
         console.error('Error fetching contact data:', error);

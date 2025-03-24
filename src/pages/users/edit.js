@@ -30,7 +30,7 @@ const UserEditForm = () => {
     const fetchUserData = async () => {
       const userId = localStorage.getItem("userId")
       try {
-        const response = await axios.get(`https://kyroes.co/st-josephs/api/users/user/${userId}`);
+        const response = await axios.get(`https://kyroes.in/st-josephs/api/users/user/${userId}`);
         if (response.data.status === 'success') {
           setUser(response.data.data); // Assuming response.data.data directly contains user data
         } else {
@@ -52,7 +52,7 @@ const UserEditForm = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put(`https://kyroes.co/st-josephs/api/users/user/${user.id}`, user);
+      const response = await axios.put(`https://kyroes.in/st-josephs/api/users/user/${user.id}`, user);
       if (response.data.status === 'success') {
         console.log('User updated successfully:', response.data);
         alert('User updated successfully');

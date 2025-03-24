@@ -39,7 +39,7 @@ const StudentEditForm = () => {
     const fetchStudentData = async () => {
       const studentId = localStorage.getItem("studentId");
       try {
-        const response = await axios.get(`https://kyroes.co/st-josephs/api/student/byid/${studentId}`);
+        const response = await axios.get(`https://kyroes.in/st-josephs/api/student/byid/${studentId}`);
         setStudent(response.data.data);
       } catch (error) {
         console.error('Error fetching student data:', error);
@@ -76,7 +76,7 @@ const StudentEditForm = () => {
     }
 
     try {
-      await axios.post('https://kyroes.co/st-josephs/api/updateStudent/', formData);
+      await axios.post('https://kyroes.in/st-josephs/api/updateStudent/', formData);
       alert('Student updated successfully');
     } catch (error) {
       console.error('Error updating student data:', error);
